@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro de Cliente - Revenda de Veículos</title>
+
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+
+        .carro {
+            background-color: lightgray;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Cadastro de Interesse em Veículos</h1>
+
+    <form action="/salvar.php" method="post">
+
+        <label for="nome">Nome:</label><br>
+        <input type="text" id="nome" name="nome" required>
+        <br><br>
+
+        <label for="sobrenome">Sobrenome:</label><br>
+        <input type="text" id="sobrenome" name="sobrenome" required>
+        <br><br>
+
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone">
+        <br><br>
+
+        <label for="veiculo">Veículo de Interesse:</label><br>
+        <select id="veiculo" name="veiculo">
+            <option>Honda Civic</option>
+            <option>Toyota Corolla</option>
+            <option>Chevrolet Onix</option>
+            <option>Volkswagen Polo</option>
+            <option>Fiat Strada</option>
+        </select>
+
+        <br><br>
+
+        <p>Deseja financiamento?</p>
+
+        <input type="radio" id="sim" name="financiamento" value="Sim">
+        <label for="sim">Sim</label><br>
+
+        <input type="radio" id="nao" name="financiamento" value="Não">
+        <label for="nao">Não</label>
+
+        <br><br>
+
+        <label for="mensagem">Observações:</label><br>
+        <textarea id="mensagem" name="mensagem" rows="4" cols="40"></textarea>
+
+        <br><br>
+
+        <input type="submit" value="Enviar Cadastro">
+
+    </form>
+
+    <h1>Veículos Disponíveis</h1>
+
+    <div class="grid">
+        <div class="carro">Honda Civic</div>
+        <div class="carro">Toyota Corolla</div>
+        <div class="carro">Chevrolet Onix</div>
+        <div class="carro">Volkswagen Polo</div>
+        <div class="carro">Fiat Strada</div>
+        <div class="carro">Jeep Renegade</div>
+    </div>
+
+    <br>
+
+    <a href="index.html">Voltar</a>
+    <nav class="navbar">
+  <div class="logo">AutoCar Veículos</div>
+
+  <div class="menu">
+    <a href="#">Início</a>
+    <a href="#">Estoque</a>
+    <a href="#">Financiamento</a>
+    <a href="#">Contato</a>
+  </div>
+</nav>
+
+<div class="parent">
+  <div class="child">
+    Encontre o carro dos seus sonhos!
+  </div>
+</div>
+
+<div class="gallery">
+  <div class="item">Honda Civic</div>
+  <div class="item">Toyota Corolla</div>
+  <div class="item">Hyundai HB20</div>
+  <div class="item">Chevrolet Onix</div>
+  <div class="item">Volkswagen Polo</div>
+  <div class="item">Fiat Argo</div>
+</div>
+
+<div class="page-layout">
+  <header class="block">
+    <h1>AutoCar Veículos</h1>
+    <p>Os melhores seminovos e novos da região.</p>
+  </header>
+
+  <main class="block">
+    <h2>Ofertas da Semana</h2>
+    <p>Financiamento facilitado e aprovação rápida.</p>
+  </main>
+
+  <footer class="block">
+    <p>📍 Rua das Concessionárias, 100</p>
+    <p>📞 (77) 99999-9999</p>
+    <p>✉️ contato@autocar.com.br</p>
+  </footer>
+</div>
+
+</body>
+</html>
